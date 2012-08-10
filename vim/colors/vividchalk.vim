@@ -123,7 +123,7 @@ highlight Search        guifg=NONE ctermfg=NONE gui=none cterm=none
 call s:hibg("Search"    ,"#555555","DarkBlue",81)
 highlight IncSearch     guifg=White guibg=Black ctermfg=White ctermbg=Black
 highlight MoreMsg       guifg=#00AA00 ctermfg=Green
-highlight LineNr        guifg=#DDEEFF ctermfg=White
+highlight LineNr        guifg=#DDEEFF ctermfg=Yellow
 call s:hibg("LineNr"    ,"#222222","DarkBlue",80)
 highlight Question      none
 high link Question      MoreMsg
