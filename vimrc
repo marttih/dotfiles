@@ -104,3 +104,70 @@ au BufRead,BufNewFile *.md set filetype=markdown
 " Space is inserted via <C-v><Space>
 " see ':h map_space' in vim for further info
 let mapleader = " "
+
+
+" ##################
+" OMAT VIMRC-asetukset
+" ##################
+
+
+syntax on
+set ruler
+set incsearch
+set ignorecase
+"set shiftwidth=4
+"set tabstop=4
+set smartcase "ignore case when pattern contains only lower case
+set title " set window title. Defaults to filename
+
+" koodausta varten:
+set smartindent 
+
+" tarkista onko tiedostossa "modeline":
+set modelines=5
+
+"make Y to yan from the cursor to the end of line.
+map Y y$ 
+
+"alleviivaus (ei toimi)
+"let u yypVr=
+" päivämäärä alleviivauksella F2:sta
+map <F2> o<C-R>=strftime("%d.%m.%Y")<CR><Esc>yypVr=o
+
+hi Search ctermbg=lightgrey
+
+"jelly on xml:ää
+"au BufRead *.jelly syntax=xml
+
+"python skeleton
+autocmd BufNewFile *.py 0r ~/.vim/skeleton.py
+autocmd BufEnter *.py set nosmartindent cindent
+
+" django
+autocmd BufEnter *.tmpl set syntax=django sw=2 sw=2
+
+"use indent and plugin files for filetypes
+filetype indent on
+filetype plugin on
+
+" search work directory recursively. 
+" TODO Säädä tämä nyk työhakemiston mukaan, vaikka ympäristömuuttujasta
+"set path=.,/usr/include,~/Documents/projects/ns-reporting/*
+
+set wildmenu
+
+" set tags working for Mac OS
+map <C-j> <C-]>
+
+if &diff
+	hi DiffChange=3
+	hi DiffText=7
+endif
+
+let &path = &path . "," . substitute($VIM_SEARCH_PATH, ':', ',', 'g')
+
+" perl
+autocmd BufNewFile *.pl 0r ~/.vim/skeleton.pl
+
+"write file autmatically when changing buffer.
+set autowrite
