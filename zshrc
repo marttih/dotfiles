@@ -44,10 +44,9 @@ export PS1='[${SSH_CONNECTION+"%n@%m:"}%~] '
 setopt histignoredups
 
 # keep TONS of history
-export HISTSIZE=4096
-
-# look for ey config in project dirs
-export EYRC=./.eyrc
+export HISTSIZE=8000
+export SAVEHIST=4096
+export HISTFILE=~/.zhistory
 
 # automatically pushd
 setopt auto_pushd
@@ -63,3 +62,6 @@ setopt cdablevars
 
 # Enable extended globbing
 setopt EXTENDED_GLOB
+
+# vi-like keybindings
+set -o vi
