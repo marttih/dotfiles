@@ -53,7 +53,7 @@ export dirstacksize=5
 
 # awesome cd movements from zshkit
 setopt AUTOCD
-setopt PUSHDMINUS PUSHDSILENT PUSHDTOHOME
+setopt PUSHD_IGNORE_DUPS
 setopt cdablevars
 
 # Try to correct command line spelling
