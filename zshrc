@@ -52,7 +52,6 @@ export HISTFILE=~/.zhistory
 export dirstacksize=5
 
 # awesome cd movements from zshkit
-setopt AUTOCD
 setopt PUSHD_IGNORE_DUPS
 setopt cdablevars
 
