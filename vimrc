@@ -151,8 +151,7 @@ filetype indent on
 filetype plugin on
 
 " search work directory recursively. 
-" TODO Säädä tämä nyk työhakemiston mukaan, vaikka ympäristömuuttujasta
-"set path=.,/usr/include,~/Documents/projects/ns-reporting/*
+"set path=./**
 
 set wildmenu
 

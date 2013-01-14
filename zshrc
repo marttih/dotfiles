@@ -63,3 +63,7 @@ setopt EXTENDED_GLOB
 
 # vi-like keybindings
 set -o vi
+
+# python
+source /usr/local/bin/virtualenvwrapper.sh
+export PYTHONSTARTUP=~/.pystartup
