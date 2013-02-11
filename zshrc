@@ -65,5 +65,10 @@ setopt EXTENDED_GLOB
 set -o vi
 
 # python
-source /usr/local/bin/virtualenvwrapper.sh
+if [ -f /usr/local/bin/virtualenvwrapper.sh ]; then
+  source /usr/local/bin/virtualenvwrapper.sh
+fi
 export PYTHONSTARTUP=~/.pystartup
+
+export PATH=$PATH:${HOME}/bin
+export PIP_DOWNLOAD_CACHE=/var/db/pip-cache
