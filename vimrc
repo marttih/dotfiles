@@ -8,6 +8,8 @@ set nowritebackup
 set ruler         " show the cursor position all the time
 set showcmd       " display incomplete commands
 
+execute pathogen#infect()
+
 " Switch syntax highlighting on, when the terminal has colors
 " Also switch on highlighting the last used search pattern.
 if (&t_Co > 2 || has("gui_running")) && !exists("syntax_on")
@@ -170,3 +172,20 @@ autocmd BufNewFile *.pl 0r ~/.vim/skeleton.pl
 
 "write file autmatically when changing buffer.
 set autowrite
+
+"clojure
+let g:vimclojure#HighlightBuiltins = 1
+let g:vimclojure#ParenRainbow = 1
+
+" clear search highlights
+map <C-L> :nohls<CR>
+" moving between tabs:
+map <S-Right> gt
+map <S-Left> gT
+
+hi Folded ctermbg=59
+hi Search ctermbg=241
+
+set cursorline
+hi CursorLine ctermbg=235
+set scrolloff=5
