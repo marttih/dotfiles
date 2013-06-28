@@ -1,0 +1,9 @@
+[submodule "vim/bundle/clojure"]
+	path = vim/bundle/clojure
+	url = git://github.com/vim-scripts/VimClojure.git
+[submodule "vim/bundle/snipmate"]
+	path = vim/bundle/snipmate
+	url = https://github.com/msanders/snipmate.vim.git
+[submodule "vim/bundle/rails"]
+	path = vim/bundle/rails
+	url = git://github.com/tpope/vim-rails.git

@@ -1,7 +1,7 @@
 # omat aliakset
 alias pyhelp="python -c help\('$1'\)"
 alias ll='ls -ltFG $*'
-alias ls='ls -FG'
+alias ls='ls -FG '
 alias tdo='devtodo'
 
 #from thoughthub
@@ -14,7 +14,6 @@ alias tdo='devtodo'
 #alias mkdir='mkdir -p'
 #alias ...='../..'
 #alias l='ls'
-#alias ll='ls -al'
 #alias lh='ls -Alh'
 #alias -g G='| grep'
 #alias -g M='| less'
